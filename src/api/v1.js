@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Apps
-const getAppInfo = (ID) => axios.get("/dtree/getAppInfo", {params: {id: ID}}).then(response => response.data);
+
 const getApp = (id) => axios.get("/v1/projects/" + id, {}).then(response => response);
 const getApps = (query) => axios.get("/v1/projects/", {params: query}).then(response => response.data);
 const getAllApps = () => axios.get("/v1/projects/").then(response => response.data);
@@ -22,7 +22,7 @@ const putTask = (id, form) => axios.put("/v1/tasks/" + id + "/", form).then(resp
 const postPlay = (form) => axios.post("/v1/run_play/", form).then(response => response);
 
 export {
-  getAppInfo,
+
   getApp,
   getApps,
   getAllApps,
